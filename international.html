@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+</head>
+
+<style>
+    .navbar {
+        overflow: hidden;
+        background-color: rgb(129, 114, 114,129, 114, 114);
+        /* width: 400px; */
+    }
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: rgb(24, 24, 24);
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: rgb(173, 161, 161);
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #585252;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: rgb(247, 234, 234);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .news {
+        margin: 2px;
+        padding: 20px;
+        /* margin-top: 0px; */
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serify;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        /* min-height: 100vh; */
+    }
+
+
+
+    .newsbox {
+
+        display: flex;
+        /* justify-content: space-between; */
+        flex-wrap: wrap;
+        /* cursor: pointer; */
+        cursor: inherit;
+        width: 50%;
+        float: left;
+        /* padding: 2px;
+			margin: 2px; */
+    }
+
+    .newsbox .box {
+
+
+        position: relative;
+        width: 40rem;
+
+        padding: 40px 40px 60px;
+        border: 1px solid;
+        box-shadow: 2px 5px 2px rgb(0, 0, 0, .1);
+        /* border: 2px solid black; */
+    }
+
+
+
+    .newsbox .box h3 {
+        position: relative;
+        /* font-size: 1.5em; */
+        font-size: 18px;
+        z-index: 2;
+        color: #333;
+        transition: 0.5s;
+    }
+
+    .newsbox .box p {
+        position: relative;
+        /* z-index: 2; */
+        color: #555;
+        transition: 0.5s;
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    /* .container .box:hover h3,
+    .container .box:hover p {
+      color: #fff;
+    } */
+
+    .name {
+        padding: 2rem;
+        color: goldenrod;
+        margin: 12rem;
+        font-size: 32px;
+        text-shadow: 12px 12px 8px rgb(0, 0, 0);
+
+    }
+
+
+    a:link {
+        color: rgb(180, 170, 28);
+
+    }
+
+    a:hover {
+        color: #333;
+
+    }
+
+    .more {
+        margin: 50px;
+        /* padding: 22px; */
+        margin-left: 1280px;
+        cursor: pointer;
+
+
+
+    }
+
+    .name {
+        padding: 2rem;
+        color: goldenrod;
+        margin: 21px;
+        font-size: 32px;
+        text-shadow: 12px 12px 8px rgb(0, 0, 0);
+
+
+
+
+    }
+
+    a:link {
+        color: rgb(0, 0, 0);
+
+    }
+
+    a:hover {
+        color: #333;
+
+    }
+
+    .more {
+        margin: 50px;
+        /* padding: 22px; */
+        margin-left: 1280px;
+        cursor: pointer;
+
+
+
+    }
+
+    .btn {
+        color: #573842;
+        border-radius: 12px;
+        background-color: rgb(58, 148, 184);
+    }
+
+    .btn:hover {
+        color: blanchedalmond;
+        background-color: rgb(43, 95, 163);
+        font-family: cursive;
+        box-shadow: 2px 3px 12px red;
+    }
+
+    /* .news {
+        overflow-y: scroll;
+        height: 1500px;
+        text-align: justify;
+
+
+
+    } */
+
+    .news .box {
+        /* padding: 2rem; */
+        margin: 12px;
+
+    }
+
+    .news ul {
+        margin-right: 62px;
+
+    }
+
+    .news ul li {
+        font-size: 16px;
+        text-decoration: underline;
+
+
+    }
+
+    .news-img {
+        background-attachment: fixed;
+        /* 
+        height: 300px;
+        width: 400px; */
+
+
+    }
+
+    /* .newsul {
+        margin-bottom: 65rem;
+
+    } */
+    .box1{
+
+        margin-bottom: 23rem;
+
+    }
+</style>
+
+<body>
+
+
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">About</a>
+        <div class="dropdown">
+            <button class="dropbtn">Category
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="national.html">National</a>
+                <a href="international.html">International</a>
+                <a href="#">Sports</a>
+                <a href="#">Society</a>
+            </div>
+        </div>
+    </div>
+    <h1>International:</h1>
+    
+    <section class="news">
+        <div class="newsbox">
+            <!-- <div class="box"> -->
+            <a href="#">
+                <img class="news-img"
+                    src="https://aniportalimages.s3.amazonaws.com/media/details/Untdsafsdfitled-320211027120806.jpg"
+                    alt="warner"></a>
+            <h5>Updated On Oct.27th 2021</h5>
+            <h3>Indo-Pacific is centre of global geopolitics, economics: Admiral Karambir Singh
+
+            </h3>
+            <p>New Delhi [India], October 27 (ANI): Emphasising that Indo-Pacific is a "centre of gravity" of global geopolitics and economics, Navy Chief Admiral Karambir Singh said that it houses nearly 61 per cent of the global population and contributes to 62 per cent of the global GDP.
+            </p>
+            <p> <a
+                    href="https://inc42.com/buzz/meet-the-16-indian-startups-selected-for-class-5-of-googles-accelerator-program/">Read
+                    More</a></p>
+        </div>
+
+        </div>
+
+
+        <div style="float: right; width: 25%;">
+
+            <!-- <h1>Related News</h1> -->
+            <div class="box1">
+                <a href="#">
+                    <img class="news-img"
+                        src="https://aniportalimages.s3.amazonaws.com/media/details/__sized__/dsgsgsgsg20211027084747-thumbnail-320x180-70.jpg"
+                        alt="Rajnikant"></a>
+                <h5>Updated On Oct.27th 2021</h5>
+                <h3>Rajinikanth meets PM Narendra <br> Modi, President Ram Nath Kovind
+                </h3>
+
+                <p> <a
+                        href="https://inc42.com/buzz/meet-the-16-indian-startups-selected-for-class-5-of-googles-accelerator-program/">Read
+                        More</a></p>
+            </div>
+
+        </div>
+        <div style="float: right; width: 25%;">
+
+
+            <div class="box1">
+                <a href="#">
+                    <img class="news-img"
+                        src="https://aniportalimages.s3.amazonaws.com/media/details/__sized__/dsgsgsgsg20211027084747-thumbnail-320x180-70.jpg"
+                        alt="Rajnikant"></a>
+                <h5>Updated On Oct.27th 2021</h5>
+                <h3>Rajinikanth meets PM Narendra <br> Modi, President Ram Nath Kovind
+                </h3>
+
+                <p> <a
+                        href="https://inc42.com/buzz/meet-the-16-indian-startups-selected-for-class-5-of-googles-accelerator-program/">Read
+                        More</a></p>
+            </div>
+
+        </div>
+
+        
+
+
+
+    </section>
+
+
+    <section class="news">
+        <div class="newsbox">
+            <!-- <div class="box"> -->
+            <a href="#">
+                <img class="news-img" style="margin-left: 120px; margin-top: 2rem;"
+                    src="https://aniportalimages.s3.amazonaws.com/media/details/__sized__/FCd5-5uXsAIvarw20211024171801202110241753222021102501410220211026030143_120211_tzuSraS-thumbnail-320x180-70.jpg"
+                    alt="virat"></a> 
+            
+            <h3>ICC T20I Rankings: Kohli drops one spot to fifth, Rahul slips to eig
+
+            </h3>
+            <p>Dubai [UAE], October 27 (ANI): South Africa batter Aiden Markram and Pakistan opener <br> Mohammad Rizwan have
+                attained career-best positions in the ICC Men's T20I Player Rankings after  their fine starts to the
+                Men's T20 World Cup 2021.
+            </p>
+            <p> <a
+                    href="https://inc42.com/buzz/meet-the-16-indian-startups-selected-for-class-5-of-googles-accelerator-program/">Read
+                    More</a></p>
+        </div>
+
+        </div>
+
+        <div class="newsbox">
+            <!-- <div class="box"> -->
+            <a href="#">
+                <img class="news-img" style="margin-left: 120px; "
+                    src="https://aniportalimages.s3.amazonaws.com/media/details/__sized__/jbjguv_ZZMMevT20211027082500-thumbnail-320x180-70.jpg"
+                    alt="stumps"></a>
+            
+            <h3>Syed Mushtaq Ali Trophy: 4 players in Mumbai squad test positive for
+            </h3>
+            <p>New Delhi [India], October 27 (ANI): Four players of the Mumbai squad have tested positive for COVID-19
+                ahead of the upcoming Syed Mushtaq Ali T20 tournament.
+            </p>
+            <p> <a
+                    href="https://inc42.com/buzz/meet-the-16-indian-startups-selected-for-class-5-of-googles-accelerator-program/">Read
+                    More</a></p>
+        </div>
+
+        </div>
+        <div class="newsbox">
+            <!-- <div class="box"> -->
+            <a href="#">
+                <img class="news-img" style="margin-left: 120px; "
+                    src="https://aniportalimages.s3.amazonaws.com/media/details/__sized__/FCfFucrVEAIfIKQ202110260741512021102607444920211027071244-thumbnail-320x180-70.jpg"
+                    alt="team"></a>
+            
+            <h3>T20 WC: India not out of tournament just after one loss, says Yusuf
+
+            </h3>
+            <p>Dubai [UAE], October 27 (ANI): Former India all-rounder Yusuf Pathan has said that the Men <br> in Blue are
+                not out of the T20 World Cup just because they lost their first game against arch-rival Pakistan.
+            </p>
+            <p> <a
+                    href="https://inc42.com/buzz/meet-the-16-indian-startups-selected-for-class-5-of-googles-accelerator-program/">Read
+                    More</a></p>
+        </div>
+
+        </div>
+        <div class="newsbox">
+            <!-- <div class="box"> -->
+            <a href="#">
+                <img class="news-img" style="margin-left: 120px; "
+                    src="https://aniportalimages.s3.amazonaws.com/media/details/__sized__/E9pBWDlWEAUAjpo202110050511432021100505292620211027022539-thumbnail-320x180-70.jpg"
+                    alt="warner"></a>
+            
+            <h3>T20 WC: Qualifying for Super 12s biggest achievement under my leader
+            </h3>
+            <p>Abu Dhabi [UAE], October 27 (ANI): Namibia captain Gerhard Erasmus has said that guiding his side to the
+                Super 12s stage of the ICC Men's T20 World Cup is the biggest achievement the Eagles have achieved under
+                his leadership.
+            </p>
+            <p> <a
+                    href="https://inc42.com/buzz/meet-the-16-indian-startups-selected-for-class-5-of-googles-accelerator-program/">Read
+                    More</a></p>
+        </div>
+
+        </div>
+
+
+
+
+
+    </section>
+    <hr>
+
+
+    <footer style="margin-top:32px;">
+        <center>
+    
+            <h>  <b> &copy; Vidhi Mittal || All Rights Reserved</b></h>
+        </center>
+        <center>
+        <ul class="nav" style="display: inline-flex; margin: 12px; padding: 12px; ">
+            <a style="text-decoration: none; list-style-type: none; margin: 12px; padding: 2px; text-align: center;" href="#"><li>Home</li></a>
+            <a style="text-decoration: none; list-style-type: none; margin: 12px; padding: 2px; text-align: center;" href="#"><li>National</li></a>
+            <a style="text-decoration: none; list-style-type: none; margin: 12px; padding: 2px; text-align: center;" href="#"><li>International</li></a>
+            <a style="text-decoration: none; list-style-type: none; margin: 12px; padding: 2px; text-align: center;" href="#"><li>Society</li></a>
+            <a style="text-decoration: none; list-style-type: none; margin: 12px; padding: 2px; text-align: center;" href="#"><li>Sports</li></a>
+        </ul>
+        </center>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
